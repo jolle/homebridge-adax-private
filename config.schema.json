@@ -1,0 +1,38 @@
+{
+  "pluginAlias": "AdaxPrivate",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "accountId": {
+        "title": "Account ID",
+        "type": "number",
+        "required": true
+      },
+      "privateKey": {
+        "title": "Private key",
+        "type": "string",
+        "required": true
+      },
+      "zones": {
+        "title": "Included zones",
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "title": "Zone name",
+          "type": "string"
+        }
+      },
+      "groups": {
+        "title": "Included groups",
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "title": "Group name",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
