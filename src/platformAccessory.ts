@@ -71,7 +71,7 @@ export class AdaxPlatformAccessory {
 
   /**
    * If there is no target temperature (i.e., it is 0), the heating is off.
-   * Otherwise, if the target temperature is bigger than the current
+   * Otherwise, if the target temperature is less than the current
    * temperature, it is cooling (passively); otherwise it is (should be) heating.
    */
   private getCurrentHeatingState(callback: CharacteristicGetCallback) {
@@ -79,7 +79,7 @@ export class AdaxPlatformAccessory {
     callback(
       null,
       (zone?.targetTemperature ?? 0) !== 0
-        ? zone!.targetTemperature > zone!.currentTemperature
+        ? zone!.targetTemperature < zone!.currentTemperature
           ? this.platform.Characteristic.CurrentHeatingCoolingState.COOL
           : this.platform.Characteristic.CurrentHeatingCoolingState.HEAT
         : this.platform.Characteristic.CurrentHeatingCoolingState.OFF,

@@ -1,6 +1,6 @@
 # Homebridge Adax (Private API)
 
-This plugin uses the private Adax API used in their mobile apps; this way it is possible to use devices that are shared with your account. The public API only shows devices that you own, not shared ones.
+This plugin uses the private Adax API that is used in their mobile apps; this way it is possible to use devices that are shared with your account. The public API only shows devices that you own, not shared ones.
 
 ## Getting the private key
 
@@ -10,4 +10,4 @@ After following the redirect and logging in, you will be redirected back and a J
 
 ## Devices = zones?
 
-The Adax API recognizes the existence of individual, real devices but only provides temperature controlling and status indication on a per-zone basis. Thus, this plugin will create each zone as a device, so you can not see the data from or control specific devices, only zones. A trick one can do is to only have one device per zone, effectively making the concept of "zones" and "devices" equivalent.
+The Adax API recognizes the existence of individual, real devices but only provides temperature controlling and status indication on a per-zone basis. Thus, this plugin will treat each zone as a device, and as such you can not see the data from or control specific devices, only zones. A trick one can do is to only have one device per zone, effectively making the concept of "zones" and "devices" equivalent.

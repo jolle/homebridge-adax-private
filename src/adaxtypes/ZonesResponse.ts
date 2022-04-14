@@ -78,5 +78,5 @@ export interface ZonesResponse {
   zones: Zone[];
   userGroups: UserGroup[];
   devices: Device[];
-  enabledIntegrations: any[];
+  enabledIntegrations: unknown[];
 }
